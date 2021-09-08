@@ -32,7 +32,8 @@ public class TranslateService {
             Translate.Translations.List list = translate.new Translations().list(
                     Arrays.asList( text ), "en"
             ).setSource( sourceLanguage ).setKey( apiKey );
-
+            // format : 可防止翻译过程中的换行符、表情符号等被翻译
+            list.setFormat( "text" );
             for ( String language : targetLanguage ) {
                 TranslationsListResponse response = list.setTarget( language ).execute();
                 if ( response.getTranslations().size() > 0 ) {

@@ -1,5 +1,1 @@
-# Leetcode
-golang solution
-
-you can view at https://leetcode.com/problems
-
+记录工作中的点滴
